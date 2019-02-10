@@ -27,7 +27,4 @@ files.each do |file|
     # Convert the MIDI to WAV
     system "timidity", "-Ow", file, "-o", output
     
-    # Puts the information that the conversion is done
-    puts "Conversion is done!"
-    
 end
