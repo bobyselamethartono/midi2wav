@@ -1,8 +1,5 @@
 #!/usr/bin/ruby
 
-# Load the required module
-require 'fileutils'
-
 # Pass file(s) as argument(s)
 files = ARGV
 
@@ -14,9 +11,6 @@ files.each do |file|
     
     # Set the output filename
     output = basename+".wav"
-    
-    # Create the empty file for the output
-    FileUtils.touch(output)
     
     # Puts the title
     activity = "Converting "+file+" to "+output
