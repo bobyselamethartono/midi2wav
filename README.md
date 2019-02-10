@@ -1,5 +1,5 @@
 # midi2wav
-A simple Ruby script to convert MIDI file(s) to WAV file(s) using TiMidity++ as the backend for Linux system.
+A simple Ruby script for Linux system to convert MIDI file(s) to WAV file(s) using TiMidity++ as the backend.
 
 ## Requirement(s)
 A working TiMidity++ (including soundfont).
