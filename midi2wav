@@ -1,0 +1,33 @@
+#!/usr/bin/ruby
+
+# Load the required module
+require 'fileutils'
+
+# Pass file(s) as argument(s)
+files = ARGV
+
+# Convert each MIDI file to WAV
+files.each do |file|
+    
+    # Get the basename
+    basename = File.basename(file, ".mid")
+    
+    # Set the output filename
+    output = basename+".wav"
+    
+    # Create the empty file for the output
+    FileUtils.touch(output)
+    
+    # Puts the title
+    activity = "Converting "+file+" to "+output
+    puts "-"*activity.length
+    puts activity
+    puts "-"*activity.length
+    
+    # Convert the MIDI to WAV
+    system "timidity", "-Ow", file, "-o", output
+    
+    # Puts the information that the conversion is done
+    puts "Conversion is done!"
+    
+end
